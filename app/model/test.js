@@ -2,10 +2,14 @@ const mongoose = require('mongoose')
 const {Schema} = mongoose
 
 const SchemaModel = new Schema({
-  x:Number,
-  name:String,
-  scores:Number
+  user_id:String,
+  user_name:String,
+  title:String,
+  done:{
+    type:Boolean,
+    default:false
+  },
 })
 
 
-module.exports = mongoose.model('test',SchemaModel)
+module.exports = mongoose.model('test_todo',SchemaModel)

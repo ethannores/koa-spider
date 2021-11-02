@@ -1,4 +1,4 @@
-const {test} = require('../controller')
+const {test,todo} = require('../controller')
 const {test:testValid} = require('../schema')
 
 const routes = [
@@ -19,6 +19,30 @@ const routes = [
     path:'/c',
     valid:'',
     controller:test.getCityByProvince
+  },
+  {
+    method:'get',
+    path:'/todo/list',
+    valid:'',
+    controller:todo.list
+  },
+  {
+    method:'post',
+    path:'/todo/save',
+    valid:'',
+    controller:todo.save
+  },
+  {
+    method:'post',
+    path:'/todo/done',
+    valid:'',
+    controller:todo.done
+  },
+  {
+    method:'post',
+    path:'/todo/del',
+    valid:'',
+    controller:todo.del
   },
 ]
 

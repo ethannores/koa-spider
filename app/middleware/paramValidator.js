@@ -12,7 +12,6 @@ module.exports = paramsSchema =>{
     if(!paramsSchema)return next()
 
     const schemaKeys = Object.getOwnPropertyNames(paramsSchema);
-    console.log(schemaKeys)
     if(!schemaKeys.length)return next()
 
     schemaKeys.some(item=>{
