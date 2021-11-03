@@ -27,8 +27,9 @@ async function save(ctx){
     }
   }else{
     //新增内容
-    if(!user_id&&!user_name&&!title){
+    if(!user_id||!user_name||!title){
       ctx.utils.assert(false, ctx.utils.throwError(9998,'新增todo时，用户id用户名和待办事项内容必填'));
+      return
     }
     result = await Model.create({
       user_id,user_name,title
